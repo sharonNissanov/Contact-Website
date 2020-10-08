@@ -1,7 +1,5 @@
-
 import React from 'react';
 import emailjs from 'emailjs-com';
-
 
 
 export default function Contact() {
@@ -19,35 +17,35 @@ export default function Contact() {
   }
 
   return (
-    <div > 
-    <form style={styles.contactStyle} className="contact-form" onSubmit={sendEmail}>
+    <div className="Email"> 
+    <form className="contact-form" onSubmit={sendEmail}>
       <input type="hidden" name="contact_number" />
-      <label>Your name</label>
+      <label> NAME</label>
       <br></br>
-      <input type="text" name="user_name" />
+      <input type="text" name="user_name" style={styles.textBox} />
       <br></br>
-      <label>Your Email</label>
+      <label> EMAIL</label>
       <br></br>
-      <input type="email" name="user_email" />
+      <input type="email" name="user_email" style={styles.textBox}/>
       <br></br>
-      <label>Your message</label>
+      <label>MESSAGE </label>
       <br></br>
-      <textarea name="message" />
+      <textarea name="message" style={styles.textBox} />
       <br></br>
-      <input type="submit" value="Send" />
+      <input type="submit" value="Send" style={styles.send} />
     </form>
     </div>
   );
 }
 
 const styles={
-    contactStyle: {
-      background:"#cccbcb",
-      color:"#676767",
-      cursor:"pointer",
-      borderRadius:"8px",
-      width:300,
-      minHeight:300,
-
+    textBox:{
+      minHeight: "100%",
+      minWidth:"90%",
+    },
+    send:{
+      fontFamily:"cursive", 
+      minHeight: "100%",
+      minWidth:"30%",
     }
 }

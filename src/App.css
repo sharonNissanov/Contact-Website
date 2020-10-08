@@ -1,31 +1,100 @@
 .App {
   text-align: center;
-  background-image: url("./components/pictures/Cover.jpg");
+  background-image: url("./components/pictures/Cover.jpg") ;
   background-size: cover;
   background-position:center;
+  cursor:pointer;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  cursor:pointer;
- 
+	max-height: 200%;
+  width: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+}
+
+.Popups{
+  position: fixed;
+  top: 50%;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
 }
+
 .CoverPage{
-  position: center;
-  margin-top: 10%;
   font-family:cursive; 
+  font-size: 15px ;
   cursor:pointer;
-}
+  max-width: 70%;
+  max-height: 10%;
+  text-shadow: 2px 2px 0 grey; 
+  position: fixed;
+  top: 15%;
+  left: 20%; 
+  margin: 0 ;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+ }
 
+/*------------------------------------------------------------------------------------------------------*/ 
+
+.Email{
+  background-color: #e6e6e6;
+  color: black;
+  cursor:pointer;
+  border-radius: 8px;
+  border:solid black;
+  text-align: left;
+  text-decoration: none ;
+  padding: 7px;
+  height: auto;
+  top: 60%;
+  position: fixed;
+  margin: 0 ;
+  left:25%;
+  width: 42%;
+}
 .About{
-  background-color: blue;
+  background-color: #e6e6e6;
+  color: black;
+  cursor:pointer;
+  border-radius: 8px;
+  border:solid black;
+  text-align: left;
+  text-decoration: none ;
+  padding: 7px;
+  height: auto;
+  top: 60%;
+  position: fixed;
+  margin: 0 ;
 }
-
+.Skills{
+  background-color: #e6e6e6;
+  color: black;
+  cursor:pointer;
+  border-radius: 8px;
+  border:solid black;
+  text-align: left;
+  text-decoration: none ;
+  padding: 7px;
+  height: auto;
+  top: 60%;
+  position: fixed;
+  margin: 0 ;
+  left: 25%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  position:absolute;
-  display: inline-flex;
+  position:fixed;
   max-width: 5%;
   max-height: 5%;
 }
@@ -47,8 +116,9 @@
 /* ---------------------------------------------------------------------------- */
 .Mail-logo {
   height: 40vmin;
-  position:absolute;
+  position:fixed;
   margin: 0;
+  padding: 0;
   left: 88%;
   top:15%;
   max-width: 5%;
@@ -73,8 +143,9 @@
 /* ---------------------------------------------------------------------------- */
 .Linkedin-logo {
   height: 40vmin;
-  position:absolute;
+  position:fixed;
   margin: 0;
+  padding: 0;
   left: 88%;
   top:25%;
   max-width: 5%;
@@ -99,11 +170,11 @@
 /* ---------------------------------------------------------------------------- */
 .Github-logo {
   height: 40vmin;
-  position:absolute;
+  position:fixed;
   margin: 0;
+  padding: 0;
   left: 88%;
   top:35%;
-
   max-width: 5%;
   max-height: 5%;
 }
@@ -124,28 +195,152 @@
   }
 } 
 
+ /*------------------------------------------------------------------------------------------------------*/ 
+.Phone-logo{
+  height: 40vmin;
+  position:fixed;
+  margin: 0;
+  padding: 0;
+  left: 88%;
+  top:45%;
+  max-width: 5%;
+  max-height: 5%;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .Phone-logo{
+    animation: App-logo-spin infinite 1s linear;
+    animation-direction: alternate-reverse;
+    
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+ /*------------------------------------------------------------------------------------------------------*/ 
+ .Whatsapp-logo{
+  height: 40vmin;
+  position:fixed;
+  margin: 0;
+  padding: 0;
+  left: 88%;
+  top:55%;
+  max-width: 5%;
+  max-height: 5%;
+}
 
-
-
-
-
-
-
-
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (prefers-reduced-motion: no-preference) {
+  .Whatsapp-logo{
+    animation: App-logo-spin infinite 1s linear;
+    animation-direction: alternate-reverse;
+    
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+ /*------------------------------------------------------------------------------------------------------*/ 
+ @media (max-device-width: 950px) {  
+  .CoverPage {
+    font-size: 10px ;
+    top:10%;
+  }
+  .Popups{
+    top:45%;
+  }
+  .Mail-logo  {
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }
+  .Github-logo{
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }
+  .Linkedin-logo{
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }
+  .Phone-logo{
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }.Whatsapp-logo{
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }
+  .App-logo{
+    max-width: 2.5%;
+    max-height: 2.5%;
+  }
+  .About{
+    font-size: 10px;
+    top: 65%;
+    width: 300px;
+    left:5%;
+  }
+  .Skills{
+    font-size: 10px;
+    top: 65%;
+    width: 300px;
+    left:5%;
+  } .Email{
+    font-size: 10px;
+    top: 65%;
+    width: 300px;
+    left:5%;
+  }
+ 
+}
+/* @media (min-width: 200px) {  
+  .CoverPage {
+    font-size: 9px ;
+    top:20%;
+  }
+  .Popups{
+    top:60%;
+  }
+ 
 } */
 
-/* .App-link {
-  color: #61dafb;
-} */
 
+
+
+/* I've found the best method is to write your default CSS for the older browsers, as older browsers including i.e. 5.5, 6, 7 and 8. Can't read @media. When I use @media I use it like this:
+
+<style type="text/css">
+    /* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+    /* @media only screen and (min-width: 960px) { */
+        /* styles for browsers larger than 960px; */
+    /* } */
+    /* @media only screen and (min-width: 1440px) { */
+        /* styles for browsers larger than 1440px; */
+    /* } */
+    /* @media only screen and (min-width: 2000px) { */
+        /* for sumo sized (mac) screens */
+    /* } */
+    /* @media only screen and (max-device-width: 480px) { */
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+    /* } */
+    /* @media only screen and (device-width: 768px) { */
+       /* default iPad screens */
+    /* } */
+    /* different techniques for iPad screening */
+    /* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { */
+      /* For portrait layouts only */
+    /* } */
+
+    /* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) { */
+      /* For landscape layouts only */
+    /* } */
+/* </style> */ 

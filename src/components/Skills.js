@@ -3,9 +3,9 @@ import '../App.css';
 
 export default function Skills() {
   return (
-    <div style={styles.skillstStyle}>
-     <h1>My skills</h1>
-      <h3>Programming Languages: C, C ++, Java, Python, JavaScript, CSS, HTML.
+    <div  className="Skills">
+     <h2>My skills</h2>
+      <h3>Programming Languages: C, C ++, Java, JavaScript, CSS3, HTML5.
         <br></br>
         Development environments: ReactJS, NodeJS, WordPress.
         <br></br>
@@ -17,14 +17,4 @@ export default function Skills() {
 
     </div>
   );
-}
-
-const styles={
-    skillstStyle: {
-      background:"#cccbcb",
-      color:"#676767",
-      cursor:"pointer",
-      borderRadius:"8px"
-    }
-
 }
