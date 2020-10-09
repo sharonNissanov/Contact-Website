@@ -24,19 +24,35 @@
   height: 100%;
   margin: 0;
   padding: 0;
-
+}
+.Buttons{
+  width:250px;
+  background-color:black;
+  border:solid;
+  color:white;
+  /* font-family:cursive; */
+  cursor:pointer;
+  word-spacing: 7px;
+  padding: 5px;
+  
 }
 
 .CoverPage{
-  font-family:cursive; 
+  font-family: Georgia; 
+  /* text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+
   font-size: 15px ;
   cursor:pointer;
   max-width: 70%;
   max-height: 10%;
-  text-shadow: 2px 2px 0 grey; 
+  color:black;
+  /* text-shadow: 2px 2px 0 grey;  */
   position: fixed;
   top: 15%;
-  left: 20%; 
+  left: 25%; 
   margin: 0 ;
   padding: 0;
   display: flex;
@@ -91,6 +107,7 @@
   margin: 0 ;
   left: 25%;
 }
+/*-----------------------LOGOS----------------------------------------------*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -250,9 +267,11 @@
   }
 }
  /*------------------------------------------------------------------------------------------------------*/ 
- @media (max-device-width: 950px) {  
+ /*  */
+ @media only screen and (min-width: 10px
+ ) {  
   .CoverPage {
-    font-size: 10px ;
+    font-size: 1px ;
     top:10%;
   }
   .Popups{
@@ -261,25 +280,33 @@
   .Mail-logo  {
     max-width: 2.5%;
     max-height: 2.5%;
+    left: 92%;
   }
   .Github-logo{
     max-width: 2.5%;
     max-height: 2.5%;
+    left: 92%;
   }
   .Linkedin-logo{
     max-width: 2.5%;
     max-height: 2.5%;
+    left: 92%;
   }
   .Phone-logo{
     max-width: 2.5%;
     max-height: 2.5%;
-  }.Whatsapp-logo{
+    left: 92%;
+  }
+  .Whatsapp-logo{
     max-width: 2.5%;
     max-height: 2.5%;
+    left: 92%;
   }
   .App-logo{
-    max-width: 2.5%;
-    max-height: 2.5%;
+    max-width: 2%;
+    max-height: 2%;
+    margin-bottom: 20px;
+    position: fixed;
   }
   .About{
     font-size: 10px;
@@ -298,8 +325,69 @@
     width: 300px;
     left:5%;
   }
- 
+  .Buttons{
+    width:100px;
+  }
 }
+/* 750פס */
+@media only screen and (max-device-height: 650px
+) {  
+ /* .CoverPage {
+   font-size: 10px ;
+   top:10%;
+ } */
+ .Popups{
+   top:50%;
+ }
+ .Buttons{
+  width:100px;
+}
+ .Mail-logo  {
+   max-width: 2.5%;
+   max-height: 2.5%;
+ }
+ .Github-logo{
+   max-width: 2.5%;
+   max-height: 2.5%;
+ }
+ .Linkedin-logo{
+   max-width: 2.5%;
+   max-height: 2.5%;
+ }
+ .Phone-logo{
+   max-width: 2.5%;
+   max-height: 2.5%;
+ }.Whatsapp-logo{
+   max-width: 2.5%;
+   max-height: 2.5%;
+ }
+ .App-logo{
+   max-width: 2%;
+   max-height: 2%;
+ }
+ .About{
+   font-size: 10px;
+   top: 65%;
+   width: 300px;
+   left:5%;
+ }
+ .Skills{
+   font-size: 10px;
+   top: 65%;
+   width: 300px;
+   left:5%;
+ } .Email{
+   font-size: 10px;
+   top: 65%;
+   width: 300px;
+   left:5%;
+ }  .Buttons{
+  width:100px;
+}
+
+}
+
+
 /* @media (min-width: 200px) {  
   .CoverPage {
     font-size: 9px ;

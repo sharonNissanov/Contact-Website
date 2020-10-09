@@ -17,7 +17,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="Email"> 
+    <div className="Email">
+       <h2 > Email me </h2> 
     <form className="contact-form" onSubmit={sendEmail}>
       <input type="hidden" name="contact_number" />
       <label> NAME</label>

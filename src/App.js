@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CoverPage from './components/CoverPage'
+ import CoverPage from './components/CoverPage'
+// import CoverPage from './components/semanticUI/CoverPage'
 import About from './components/About'
 import MyCV from './components/pictures/‏‏CV_Sharon_Nissanov.pdf';
 import Skills from './components/Skills'
@@ -22,10 +23,10 @@ export default function App () {
       <CoverPage />
 
       <div className="Popups" > 
-      <Popup   style={styles.popup} trigger={<button  style={styles.button}> About</button>} ><About/></Popup>
-      <button style={styles.button}  onClick={() => {window.open('https://github.com/sharonNissanov')}}>Projects</button>
-      <Popup trigger={<button  style={styles.button}> Skills</button>} ><Skills/></Popup>
-      <Popup trigger={<button  style={styles.button}> Contact</button>} ><Contact/></Popup>
+      <Popup  style={styles.popup} trigger={<button className="Buttons"> About</button>} ><About/></Popup>
+      {/* <button  className="Buttons"  onClick={() => {window.open('https://github.com/sharonNissanov')}}>Projects</button> */}
+      <Popup trigger={<button  className="Buttons"> Skills</button>} ><Skills/></Popup>
+      <Popup trigger={<button  className="Buttons"> Contact</button>} ><Contact/></Popup>
       <br></br>
       <a  style={styles.button}  href={MyCV} download > DOWNLOAD MY CV</a>
       <Popup trigger={<img src={mail} className="Mail-logo" />} ><Contact/></Popup>
@@ -59,7 +60,7 @@ const styles={
   background:"black",
   border:"solid",
   color:"white",
-  fontFamily:"cursive",
+  //fontFamily:"cursive",
   cursor:"pointer",wordSpacing: "7px",padding: 5,
 
   }

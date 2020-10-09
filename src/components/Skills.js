@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <div  className="Skills">
      <h2>My skills</h2>
-      <h3>Programming Languages: C, C ++, Java, JavaScript, CSS3, HTML5.
+      <h3>Programming languages: C, C ++, Java, JavaScript, CSS3, HTML5.
         <br></br>
         Development environments: ReactJS, NodeJS, WordPress.
         <br></br>

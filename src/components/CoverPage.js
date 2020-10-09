@@ -28,7 +28,7 @@ const styles={
  space: {
   color:"white",
   fontSize:"8px",
-  textShadow: "0px 0px 0 white",
+  //textShadow: "0px 0px 0 white",
 
   }
 }
