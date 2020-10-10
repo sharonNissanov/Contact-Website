@@ -5,10 +5,21 @@ import './Semantic.css';
 function Skills() {
     const [open, setOpen] = React.useState(false)
     const [visible , setVisible] = React.useState(false)
+    const [chosen_language , setChosen_language] = React.useState(null)
 
     React.useEffect(() => {
+      try{ 
+        const chosen_lan = localStorage.getItem("Language");
+        if(chosen_lan!==null){ 
+          setChosen_language(chosen_lan)
+     
+        }
+      }catch(e){
+          console.log(e)
+      } 
+  
     setVisible(!visible) 
-    }, visible);
+    },  [setVisible]);
 
     return (
       <Modal
@@ -20,7 +31,7 @@ function Skills() {
         trigger={
         <div>
         <Transition visible={visible} animation='scale' duration={1400} >
-        <Button size="medium">Skills</Button>
+        <Button >{chosen_language==="English" ? "Skills" : "כישורים" }</Button>
         </Transition>
         </div>}
       >
@@ -36,7 +47,7 @@ function Skills() {
             <Icon name='remove' /> No
           </Button> */}
           <Button inverted onClick={() => setOpen(false)}>
-            <Icon name='remove'  /> close
+            <Icon name='remove'  /> {chosen_language==="English" ? "close" : "סגור"}
           </Button>
         </Modal.Actions>
       </Modal>

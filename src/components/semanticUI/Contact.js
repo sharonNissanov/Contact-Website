@@ -7,10 +7,21 @@ function Contact() {
 
     const [open, setOpen] = React.useState(false)
     const [visible , setVisible] = React.useState(false)
+    const [chosen_language , setChosen_language] = React.useState(null)
 
     React.useEffect(() => {
+      try{ 
+        const chosen_lan = localStorage.getItem("Language");
+        if(chosen_lan!==null){ 
+          setChosen_language(chosen_lan)
+     
+        }
+      }catch(e){
+          console.log(e)
+      } 
+  
       setVisible(!visible) 
-    }, visible);
+    },  [setVisible]);
   
   
     function sendEmail(e) {
@@ -23,31 +34,43 @@ function Contact() {
             alert("somethimg went wrong");
           });
       }
+
+      const styles={
+        textBox:{
+          textAlign: chosen_language==="English" ? null : "right" ,
+          minHeight: "100%",
+          minWidth:"90%",
+        },
+        send:{
+        //  fontFamily:"Georgia", 
+          minHeight: "100%",
+          minWidth:"30%",
+          color:"grey"
+        }
+    }
+
       const Form=()=>(
-        <div style={{ borderRadius: 0,
-            // opacity: 0.6,
-            padding: '2em',
-            backgroundColor:"grey",}}>
-        <h2 > Email me </h2> 
+        <div style={{ padding: '2em', backgroundColor:"grey",  textAlign:chosen_language==="English" ? null : "right"  }}>
+        <h2 > {chosen_language==="English" ? "Email me " : " שלחו לי מייל"} </h2> 
         <form className="contact-form" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
-        <label> NAME</label>
+        <label>{chosen_language==="English" ? "NAME " : " שם "} </label>
         <br></br>
         <input type="text" name="user_name" style={styles.textBox} />
         <br></br>
-        <label> EMAIL</label>
+        <label>{chosen_language==="English" ? "EMAIL " : " כתובת מייל"} </label>
         <br></br>
         <input type="email" name="user_email" style={styles.textBox}/>
         <br></br>
-        <label>MESSAGE </label>
+        <label>{chosen_language==="English" ? "MESSAGE " : "הודעה"} </label>
         <br></br>
         <textarea name="message" style={styles.textBox} />
         <br></br>
-        <input type="submit" value="Send" style={styles.send} />
+        <input type="submit"  value={chosen_language==="English" ? "Send " : "שלח"} style={styles.send} />
         </form>
         </div>
   )
-  
+
 
     return (
       <Modal
@@ -59,7 +82,7 @@ function Contact() {
         trigger={  
         <div >
         <Transition visible={visible} animation='scale' duration={2000} >
-        <Button size="medium" >Contact</Button>
+        <Button>  {chosen_language==="English" ? "Contact" : "צור קשר" }</Button>
         </Transition>  </div>
         }
         >
@@ -72,26 +95,10 @@ function Contact() {
 
         <Modal.Actions>
         <Button inverted onClick={() => setOpen(false)}>
-          <Icon name='remove' /> close
+          <Icon name='remove' />  {chosen_language==="English" ? "close" : "סגור"}
         </Button>
       </Modal.Actions>
       </Modal>
     )
   }
-  
-
-  const styles={
-    textBox:{
-      minHeight: "100%",
-      minWidth:"90%",
-    },
-    send:{
-    //  fontFamily:"Georgia", 
-      minHeight: "100%",
-      minWidth:"30%",
-      color:"grey"
-    }
-}
-
-
   export default Contact;

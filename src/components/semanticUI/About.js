@@ -5,10 +5,23 @@ import {  Button, Header, Icon, Modal, Transition } from 'semantic-ui-react'
 function About() {
   const [open, setOpen] = React.useState(false)
   const [visible , setVisible] = React.useState(false)
-
+  const [chosen_language , setChosen_language] = React.useState(null)
+  
   React.useEffect(() => {
+    try{ 
+      const chosen_lan = localStorage.getItem("Language");
+      if(chosen_lan!==null){ 
+        setChosen_language(chosen_lan)
+   
+      }
+    }catch(e){
+        console.log(e)
+    } 
+
     setVisible(!visible) 
-  }, visible);
+  }, [setVisible]);
+
+
 
   return (
 
@@ -21,7 +34,7 @@ function About() {
       trigger={
         <div>
         <Transition visible={visible} animation='scale' duration={1100} >
-        <Button size="medium" >About</Button>
+        <Button>{chosen_language==="English" ? "About" : "על עצמי" }</Button>
         </Transition>
         </div>}
     >
@@ -29,12 +42,12 @@ function About() {
         <Icon name='lightbulb outline' />
       </Header>
       <Modal.Content>
-        <AboutText/>
+      {chosen_language==="English" ? <AboutEnglishText/> :<AboutHebrewText/> } 
       </Modal.Content>
 
       <Modal.Actions>
         <Button inverted onClick={() => setOpen(false)}>
-          <Icon name='remove' /> close
+          <Icon name='remove' /> {chosen_language==="English" ? "close" : "סגור"}
         </Button>
       </Modal.Actions>
     </Modal>
@@ -44,12 +57,8 @@ function About() {
 
 
 
-const AboutText=()=>(
-  <div style={{  borderRadius: 0,
-        // opacity: 0.6,
-        padding: '2em',
-        backgroundColor:"grey",
-      }}>
+const AboutEnglishText=()=>(
+  <div style={{ padding: '2em',backgroundColor:"grey" }}>
    
    <h2> Hey there!</h2> 
    <h3> I'm 23 years old and a software engineering graduate- GPA 89.
@@ -62,6 +71,23 @@ const AboutText=()=>(
   </h3>
 </div>
 )
+
+const AboutHebrewText=()=>(
+  <div style={{padding: '2em',backgroundColor:"grey",  textAlign: "right"}}>
+   
+   <h2> !היי</h2> 
+   <h3> בת 23, בוגרת תואר בהנדסת תוכנה - ממוצע 89
+      <br></br>
+לאחרונה פיתחתי מערכת לארגון בטחוני ע"י שימוש ב
+
+ <br></br>
+ NodeJS , React-Redux, React JS  .MongoDB -ו <br></br>
+  אני בעלת מוטבציה גבוהה מאוד וכישורים בין אישיים מצוינים
+  ומחפשת את האתגר הבא שלי בפיתוח תוכנה
+  </h3>
+</div>
+)
+
 
 
 export default About;

@@ -8,7 +8,7 @@ function Icons() {
 
     React.useEffect(() => {
       setVisible(!visible) 
-    }, visible);
+    },  [setVisible]);
 
 return(
             
@@ -16,9 +16,9 @@ return(
         
         <Transition visible={visible} animation='scale' duration={4000} >
        
-        <Icon.Group  container size='medium' className="Group">
+        <Icon.Group  container="true" className="Group">
         <div  className="Icons"  >
-        <Icon.Group  container size='large' >
+        <Icon.Group  container="true" size='large' >
     
         <Icon loading size='big' name='circle notch' />
         <Icon name='whatsapp square' 
@@ -29,7 +29,7 @@ return(
         </div>
  
         <div  className="Icons"  >
-        <Icon.Group size='large' container >
+        <Icon.Group size='large' container="true" >
         <Icon loading size='big' name='circle notch' />
         <Icon name='linkedin square'
         onClick={() => {window.open('https://www.linkedin.com/in/sharon-nissanov/')}} />

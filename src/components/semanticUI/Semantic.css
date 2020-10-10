@@ -15,6 +15,7 @@
     position: absolute; 
     top: 0;
     left: 0;
+    display: inline;
   }
 .CoverPage1{
     font-family: Georgia; 
@@ -24,6 +25,9 @@
     /* padding-top: 5%; */
     cursor:pointer;
     color:black;
+    display: inline;
+    
+   
    }
 
 
@@ -44,6 +48,31 @@
      display: inline;
 
   }
-.Button{
-  /* padding-bottom: 158; */
+.LanguageDropdown{
+  display: inline;
+  position: absolute; 
+  margin: 0;
+  padding: 0;
+  min-height: 10px;
+  /* max-width:10px; */
+  background-color: blue;
+}
+.GridLanguageDropdown{
+  display: inline;
+  min-height: 50%;
+  margin: 0;
+  padding: 0;
+   max-width:10px;
+  /* max-width:10px; */
+  
+}
+.L{
+  display: inline;
+  position: fixed; 
+  margin: 0;
+  padding: 0;
+  /* background-color: */
+  /* top: 2%;
+  left:10%; */
+   /* display: inline; */
 }
