@@ -21,6 +21,29 @@ function Skills() {
     setVisible(!visible) 
     },  [setVisible]);
 
+
+    const SkillsText=()=>(
+      <div style={{  borderRadius: 0,padding: '2em',backgroundColor:"grey",}}>
+      {/* , textAlign:chosen_language==="English" ? null : "right" */}
+       <h2 style={{textAlign:chosen_language==="English" ? null : "right" }}>
+         {chosen_language==="English" ? " My skills" : "הכישורים שלי" }</h2>
+  
+        <h3> 
+          Web Technologies: HTML, CSS, JavaScript, React JS, Express JS, Node.js, WordPress, Bootstrap, Material UI, Semantic UI, GitHub, etc.
+          <br></br>
+          Programming languages: C, C ++, Java.
+          <br></br>
+          In-depth knowledge in Object-Oriented Programming, algorithms and data structures.
+          <br></br>
+          {/* Operating Systems: Linux, Windows.
+          <br></br> */}
+        </h3>
+  
+      </div>
+    )
+  
+    
+
     return (
       <Modal
         basic
@@ -54,25 +77,5 @@ function Skills() {
     )
   }
   
-  const SkillsText=()=>(
-    <div style={{  borderRadius: 0,
-          // opacity: 0.6,
-          padding: '2em',
-          backgroundColor:"grey",
-        }}>
-    
-     <h2>My skills</h2>
-      <h3>Programming languages: C, C ++, Java, JavaScript, CSS3, HTML5.
-        <br></br>
-        Development environments: ReactJS, NodeJS, WordPress.
-        <br></br>
-        In-depth knowledge in OO Programming, algorithms and data structures.
-        <br></br>
-        Operating Systems: Linux, Windows.
-        <br></br>
-      </h3>
 
-    </div>
-  )
-  
   export default Skills;
