@@ -30,7 +30,7 @@ export default class TransitionExampleTransition extends Component{
     <Placeholder.Line />Hello!
     <Placeholder.Line />I'm Sharon Nissanov
     <Placeholder.Line /> A software engineering graduate.
-    <Placeholder.Line />I'm looking for a junior position in software development
+    <Placeholder.Line />I'm looking for a position in software development
     </Placeholder.Paragraph>
     </Placeholder>
     </Transition>
@@ -42,7 +42,7 @@ export default class TransitionExampleTransition extends Component{
     <Placeholder.Line />שלום
     <Placeholder.Line />אני שרון ניסנוב
     <Placeholder.Line /> בוגרת תואר בהנדסת תוכנה
-    <Placeholder.Line />מחפשת  משרת ג'וניור בתחום הפיתוח 
+    <Placeholder.Line />מחפשת  משרה בתחום הפיתוח 
     </Placeholder.Paragraph>
     </Placeholder>
     </Transition>

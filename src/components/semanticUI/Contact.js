@@ -40,9 +40,11 @@ function Contact() {
           textAlign: chosen_language==="English" ? null : "right" ,
           minHeight: "100%",
           minWidth:"90%",
+          borderRadius:"20px",
+          // color:"black"
         },
         send:{
-        //  fontFamily:"Georgia", 
+          borderRadius:"20px",
           minHeight: "100%",
           minWidth:"30%",
           color:"grey"
@@ -50,7 +52,7 @@ function Contact() {
     }
 
       const Form=()=>(
-        <div style={{ padding: '2em', backgroundColor:"grey",  textAlign:chosen_language==="English" ? null : "right"  }}>
+        <div style={{ opacity:"0.55",borderRadius:"20px", padding: '2em', backgroundColor:"grey",  textAlign:chosen_language==="English" ? null : "right"  }}>
         <h2 > {chosen_language==="English" ? "Email me " : " שלחו לי מייל"} </h2> 
         <form className="contact-form" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
@@ -82,7 +84,7 @@ function Contact() {
         trigger={  
         <div >
         <Transition visible={visible} animation='scale' duration={2000} >
-        <Button>  {chosen_language==="English" ? "Contact" : "צור קשר" }</Button>
+        <Button>  {chosen_language==="English" ? "Contact" : "יצירת קשר" }</Button>
         </Transition>  </div>
         }
         >

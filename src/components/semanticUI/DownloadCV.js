@@ -1,6 +1,7 @@
 import React from 'react'
 import { Transition , Button} from 'semantic-ui-react';
-import MyCV from '../pictures/‏‏CV_Sharon_Nissanov.pdf';
+import ENMyCV from '../pictures/‏‏CV_Sharon_Nissanov.pdf';
+import HeMyCV from '../pictures/HE_CV_Sharon_Nissanov.pdf';
 
 function DownloadCV ()
 {
@@ -22,11 +23,20 @@ function DownloadCV ()
 
     return(
         <div>
+          {chosen_language==="English" ? 
         <Transition visible={visible} animation='scale' duration={4000} >
-        <Button><a  href={MyCV} style={{color:"#00000099"}} download >
-        {chosen_language==="English" ? "DOWNLOAD MY CV" : "לצפיה בקורות חיים" }
+        <Button><a  href={ENMyCV} style={{color:"#00000099"}} download >
+        DOWNLOAD MY CV
        </a> </Button>
+        </Transition>:
+        <Transition visible={visible} animation='scale' duration={4000} >
+        <Button>
+        <a  href={HeMyCV} style={{color:"#00000099"}} download >
+          הורדת קורות חיים
+        </a> </Button>
         </Transition>
+
+          }
          </div>
     )
 }

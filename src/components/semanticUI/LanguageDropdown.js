@@ -26,15 +26,10 @@ function LanguageDropdown() {
 
 
   return (
-    
-    <Segment compact className ="L" 
-    style={{  borderRadius: 0,
-       opacity: 0.7,
-   //   padding: '2em',
-     // backgroundColor:"grey",
+    <div className ="LanguageDropdown"  >
 
-    }}
-    >
+    
+    <Segment compact  >
     <Checkbox size="big" checked={ifChecked} slider  
       label={chosen_language==="English" ? "עברית " : "English"} 
       
@@ -65,7 +60,7 @@ function LanguageDropdown() {
   
       />
     </Segment >
-
+    </div>
 
     // <Modal className ="L" 
     //   basic

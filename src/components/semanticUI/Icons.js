@@ -16,11 +16,11 @@ return(
         
         <Transition visible={visible} animation='scale' duration={4000} >
        
-        <Icon.Group  container="true" className="Group">
+        <Icon.Group  container="true" className="Group" >
         <div  className="Icons"  >
         <Icon.Group  container="true" size='large' >
     
-        <Icon loading size='big' name='circle notch' />
+        <Icon loading size='big' name='circle notch'  />
         <Icon name='whatsapp square' 
         onClick={() => 
         { window.location.href =

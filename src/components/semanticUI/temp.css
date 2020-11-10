@@ -1,26 +1,18 @@
 /*semantics!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .App1 {
-  text-align: center;
-  background-image: url("../pictures/Cover.jpg") ;
-  background-size: cover;
-  background-position:center;
-  cursor:pointer;
-
-  min-height: 100%;
-
-  width: 100%;
-  position: absolute; 
-  top: 0;
-  left: 0;
-  display: inline;
-  }
-  .Grid{
-    position: absolute  ; 
-    top:30%;
-    left: 40%;
-    transform: translate(-30%, -30%);
-    align-items: center;
     text-align: center;
+    background-image: url("../pictures/Cover.jpg") ;
+    background-size: cover;
+    background-position:center;
+    cursor:pointer;
+
+    min-height: 100%;
+
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: inline;
   }
 .CoverPage1{
     font-family: Georgia; 
@@ -31,7 +23,7 @@
     cursor:pointer;
     color:black;
     display: inline;
- 
+    
    
    }
 
@@ -51,10 +43,17 @@
     margin-right: 20px;
     padding: 0;
      display: inline;
-     color: black;
 
   }
-
+.LanguageDropdown{
+  display: inline;
+  position: absolute; 
+  margin: 0;
+  padding: 0;
+  min-height: 10px;
+  /* max-width:10px; */
+  background-color: blue;
+}
 .GridLanguageDropdown{
   display: inline;
   min-height: 50%;
@@ -64,11 +63,11 @@
   /* max-width:10px; */
   
 }
-.LanguageDropdown{
-  /* display: inline; */
-  position: absolute; 
-
-  opacity: 0.7;
+.L{
+  display: inline;
+  position: fixed; 
+  margin: 0;
+  padding: 0;
   /* background-color: */
   /* top: 2%;
   left:10%; */

@@ -23,7 +23,7 @@ function Skills() {
 
 
     const SkillsText=()=>(
-      <div style={{  borderRadius: 0,padding: '2em',backgroundColor:"grey",}}>
+      <div style={{padding: '2em',backgroundColor:"grey", borderRadius:"20px"}}>
       {/* , textAlign:chosen_language==="English" ? null : "right" */}
        <h2 style={{textAlign:chosen_language==="English" ? null : "right" }}>
          {chosen_language==="English" ? " My skills" : "הכישורים שלי" }</h2>

@@ -58,7 +58,7 @@ function About() {
 
 
 const AboutEnglishText=()=>(
-  <div style={{ padding: '2em',backgroundColor:"grey" }}>
+  <div style={{ padding: '2em',backgroundColor:"grey",borderRadius:"20px" }}>
    
    <h2> Hey there!</h2> 
    <h3> I'm 23 years old and a software engineering graduate- GPA 89.
@@ -73,7 +73,7 @@ const AboutEnglishText=()=>(
 )
 
 const AboutHebrewText=()=>(
-  <div style={{padding: '2em',backgroundColor:"grey",  textAlign: "right"}}>
+  <div style={{padding: '2em',backgroundColor:"grey",textAlign: "right", }}>
    
    <h2> !היי</h2> 
    <h3> בת 23, בוגרת תואר בהנדסת תוכנה - ממוצע 89
